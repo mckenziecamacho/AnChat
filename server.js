@@ -5,14 +5,16 @@ const http = require('http');
 const server = http.createServer(app);
 //creating http server
 const { Server } = require("socket.io");
+const PORT = 3005
 const cors = require("cors")
 app.use(cors());
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3002",
+        origin: "http://localhost:3005",
         methods: ["GET", "POST"],
-    },
+    }, 
+    //cors allows any origin
 });
 // reads a JavaScript file executes it
 // and then proceeds to return the export object
@@ -35,6 +37,11 @@ io.on('connection', (socket) => {
 });
 //printing out chat message
 
-server.listen(3002, () => {
-  console.log('listening on *:3002');
+
+http.listen(PORT, () => {
+    console.log(`listening on *:${PORT}`);
+});
+
+server.listen(3005, () => {
+  console.log('listening on *:3005');
 });
