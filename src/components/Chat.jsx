@@ -1,7 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+// import { socket } from "socket.io-client";
+
+// const Chat = () => {
+//   socket.emit("messageFromClient", "Hi!");
+//   socket.on("messageFromServer", message => console.log(message));
+// }
+// export default Chat;
 
 
-function Chat({ socket }) {
+
+const Chat = (messages) => {
+    console.log(messages)
+    // return(
+    //     <div>
+    //      {messages.map((message, index) => {
+    //     if (message.id === yourID) {
+    //       return (
+    //         {message.body}
+    //       )
+    //     }
+    //     </div>
+    // )
+}
+export default Chat;
+
+
+
+
+// function Chat({ socket }) {
     // const [chat, setChat] = useState({});
 
     // useEffect(() => {
@@ -32,5 +58,5 @@ function Chat({ socket }) {
 
 
 
-}
-export default Chat;
+// }
+// export default Chat;
