@@ -8,7 +8,6 @@ const ChatBox = () => {
 
         <form onSubmit="{}">
             <input id="input" size="large" placeholder="Type something here...."/>
-            {/* <input className="input" placeholder="Type something here..."/> */}
             <Button className="send-button" variant="contained" size="large">Send</Button>
         </form>
 

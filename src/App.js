@@ -55,7 +55,7 @@ const App = () => {
 return (
 <div>
   <Header />
-  <Chat/>
+  {/* <Chat/> */}
   <ChatBox/>
  
   {/* <div className='chat-box'>
