@@ -1,24 +1,10 @@
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-// import socketio from "socket.io-client";
-// import React, { useEffect, useState } from "react";
 import Chat from './components/Chat';
 import ChatBox from './components/ChatBox';
-// import { emit } from 'nodemon';
-// import io from 'socket.io-client';
-// const socket = io.connect("http://localhost:3005")
-// //connection to socket server ^^
 
 import React from 'react';
-import Container from '@material-ui/core/Container';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/';
-import Form from '@material-ui/core/';
-import MyMessage from '@material-ui/core/';
-import MyRow from '@material-ui/core/';
-import PartnerMessage from '@material-ui/core/';
-import PartnerRow from '@material-ui/core/';
 
 
 
@@ -60,7 +46,7 @@ const App = () => {
       body: chat,
       id: yourID,
     };
-    setMessages("")
+    setMessages(" ")
     socketRef.current.emit("send message", messageObject);
   }
   function handleChange(e) {
@@ -70,10 +56,11 @@ const App = () => {
 return (
 <div>
   <Header />
+  <Chat/>
   <ChatBox/>
   <Footer/>
  
-<div>
+  {/* <div className='chat-box'>
   <Container>
   {messages.map((message, index) => {
     if (message.id === yourID){
@@ -95,11 +82,11 @@ return (
   })}
 
   </Container>
-  <Form onSubmit={send_message}>
-  <TextField value={chat} onChange={handleChange} placeholder="Type here....."/>
+  <form onSubmit={send_message}>
+  <TextField className="text-field"  value={chat} onChange={handleChange} placeholder="Type here....."/>
   <Button>Send</Button>
-  </Form>
-  </div> 
+  </form>
+  </div>  */}
 
 </div>
 );
@@ -159,11 +146,12 @@ export default App;
 
 
 // const SERVER = "http://192.168.1.165:3000";
+
 // function App() {
 //   const [socket, setSocket] = useState("");
 
 //   useEffect(() => {
-//     const newSocket = socketio(SERVER)
+//     const newSocket = io(SERVER)
 //     //connecting to the backend
 //     setSocket(newSocket);
 //     return () => newSocket.close();
