@@ -57,7 +57,6 @@ return (
   <Header />
   <Chat/>
   <ChatBox/>
-  {/* <Footer/> */}
  
   {/* <div className='chat-box'>
   <Container>
