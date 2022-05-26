@@ -44,7 +44,8 @@ body {
     resize: none;
 }
 
-#input{
+#input,
+.send-button{
     position:absolute;
     bottom:2px;
     width:60%;
@@ -61,3 +62,9 @@ body {
     height:40px;   /* Height of the footer */
     text-align: center; 
 } 
+
+.chat{
+    width: 100px;
+    height: 100px;
+    border-color: black;
+}
