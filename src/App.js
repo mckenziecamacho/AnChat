@@ -4,9 +4,8 @@ import Footer from './components/Footer';
 import Chat from './components/Chat';
 import ChatBox from './components/ChatBox';
 
+
 import React from 'react';
-
-
 
 import "./App.css";
 import io from "socket.io-client";
@@ -58,7 +57,7 @@ return (
   <Header />
   <Chat/>
   <ChatBox/>
-  <Footer/>
+  {/* <Footer/> */}
  
   {/* <div className='chat-box'>
   <Container>

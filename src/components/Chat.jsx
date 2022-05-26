@@ -21,7 +21,6 @@ const Chat = () => {
     return () => {
         socketRef.current.disconnect();
     };
-    
     const sendMessage = (messageBody) => {
         socketRef.current.emit(newMessage, {
             body: messageBody,
