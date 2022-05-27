@@ -23,7 +23,6 @@ io.on('connection', (socket) => {
 })
 
 
-
 io.sockets.emit('some event', { someProperty: 'some value', otherProperty: 'other value' });
 //emit => broadcast to everybody on url
 

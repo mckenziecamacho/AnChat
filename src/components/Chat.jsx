@@ -8,15 +8,11 @@ function Chat (props) {
         {
           props.messages.map(message => {
             return (
-              <p>{message}</p>
+              <p key="key">{message}</p>
             )
           })
         }
       </div>
-
-
     )
-
-
 }
 export default Chat;

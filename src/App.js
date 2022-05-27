@@ -1,17 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import ChatBox from './components/ChatBox';
 import Chat from './components/Chat';
-
-
-
-
-import "./App.css";
 import io from "socket.io-client";
-import { useEffect, useState, useRef } from "react";
-
+import { useEffect, useState } from "react";
 
 const socket = io("http://localhost:3005");
 
@@ -27,16 +21,11 @@ function App() {
   setMessages([...messages, message]) 
   })
 
-
-
   return (
     <div className="App">
       <Header/>
       <Chat messages={messages}/>
       <ChatBox/>
-
- 
-
     </div>
   );
 }
