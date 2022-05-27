@@ -45,7 +45,7 @@ React Router
 Express
 Node JS
 Socket.io
-Surge Deployment
+Surge Deploymeny
 
 
 ## Wireframes
