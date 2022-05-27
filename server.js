@@ -4,16 +4,16 @@ const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
-// const cors = require('cors');
+const cors = require('cors');
 
-// const socketio = require("socket.io")(server, {
-//   cors: {
-//     origin: {"*"},
-//     methods: ["GET", "POST"],
-//     allowedHeaders: ["my-custom-header"],
-//     credentials: true
-//   }
-// });
+const socketio = require("socket.io")(server, {
+  cors: {
+    origin: "http://localhost:3005",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["my-custom-header"],
+    credentials: true
+  }
+});
 
 io.on('connection', (socket) => {
   console.log('a user connected');

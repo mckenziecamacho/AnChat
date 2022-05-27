@@ -25,7 +25,8 @@ const ChatBox = () => {
         onSubmit={ (e) => {
             inputRef.current.reset();
             handleSubmit(e) }}>
-        Message: <input name="message" />
+        &nbsp; &nbsp; &nbsp; Message: &nbsp; 
+        <input name="message" />
         <button type="submit">Send Message</button>
         </form>
         </div>

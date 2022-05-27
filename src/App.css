@@ -19,20 +19,19 @@ body {
 }
 
 
-.input{
+.chat-box{
     width: 100%;
-    height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
     border-radius: 4px;
-    background-color: #f8f8f8;
     resize: none;
+    display: flex;
+    align-items: center;
 }
 
 .chat{
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     border-color: black;
     border: 2px solid #dedede;
     background-color: #f1f1f1;
@@ -48,15 +47,15 @@ body {
     position: relative;
     margin: 0 5px;
     pointer-events: auto;
-    float: right;
 }
 
 .chat::after {
     content: "";
     clear: both;
     display: table;
-  
+    float: left;
 }
+
 
 .header {
     display: inline;
@@ -64,12 +63,10 @@ body {
 	font: 25px Helvetica, Sans-Serif;
 	letter-spacing: -5px;
     color: rgb(223, 136, 151);
-    /* color: palevioletred; */
-	/* color: rgba(0,0,255,0.5); */
 }
+
 .header:after {
     position: absolute; left: 10px; top: 5px;
-    /* color: rgba(255,0,0,0.5); */
 }
 
 .header:hover {
@@ -82,12 +79,19 @@ body {
 
 p {
 	position: relative;
-	max-width: 5em;
+	/* max-width: 5em; */
 	background-color: #fff;
 	padding: 1.125em 1.5em;
-	/* font-size: 1.25em; */
 	border-radius: 1rem;
     box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+   
+}
+
+p::after{
+    content: "";
+    clear: both;
+    display: table;
+    float: left;
 }
 
 html {
@@ -113,4 +117,11 @@ html, body {
     
 }
 
+.chat-message{
+    display: float;
+}
+
+input{
+   margin: 5px;
+}
 

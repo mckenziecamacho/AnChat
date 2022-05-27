@@ -8,7 +8,11 @@ function Chat (props) {
         {
           props.messages.map(message => {
             return (
-              <p key="key">{message}</p>
+              <div className='chat-message'>
+                <p key="key">{message}</p>
+              </div>
+              
+             
             )
           })
         }
