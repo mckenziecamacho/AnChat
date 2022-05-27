@@ -6,7 +6,14 @@ import Chat from './components/Chat';
 import io from "socket.io-client";
 import { useEffect, useState } from "react";
 
-const socket = io("http://localhost:3005");
+// const socket = io("http://localhost:3005", {
+//   withCredentials: true,
+//   extraHeaders: {
+//     "my-custom-header": "abcd"
+//   }
+// });
+
+const socket = io('http://localhost:3005')
 
 function App() {
   const [messages, setMessages] = useState([]);

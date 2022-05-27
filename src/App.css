@@ -11,12 +11,12 @@ body {
     background: #e5e5e5;
     font-family: 'Lato', sans-serif;
     margin: 0px auto;
-    
 }
-/* ::selection {
+
+::selection {
     background: rgba(82,179,217,0.3);
     color: inherit;
-} */
+}
 
 
 .input{
@@ -42,12 +42,20 @@ body {
     overflow: auto;
     display: flex;
     align-items: center;
+    overflow-y: scroll;
+    display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+    margin: 0 5px;
+    pointer-events: auto;
+    float: right;
 }
 
 .chat::after {
     content: "";
     clear: both;
     display: table;
+  
 }
 
 .header {
@@ -55,8 +63,8 @@ body {
 	position: relative;
 	font: 25px Helvetica, Sans-Serif;
 	letter-spacing: -5px;
-    /* color: rgb(223, 136, 151); */
-    color: palevioletred;
+    color: rgb(223, 136, 151);
+    /* color: palevioletred; */
 	/* color: rgba(0,0,255,0.5); */
 }
 .header:after {
@@ -64,7 +72,7 @@ body {
     /* color: rgba(255,0,0,0.5); */
 }
 
-.header:hover{
+.header:hover {
     -webkit-transform: scale(1.1); 
     -moz-transform:    scale(1.1);
     -ms-transform:     scale(1.1); 
@@ -73,12 +81,11 @@ body {
 }
 
 p {
-	
 	position: relative;
 	max-width: 5em;
 	background-color: #fff;
 	padding: 1.125em 1.5em;
-	font-size: 1.25em;
+	/* font-size: 1.25em; */
 	border-radius: 1rem;
     box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
 }
@@ -89,9 +96,12 @@ html {
 	font-weight: 300;
 	color: #192229;
 	background: linear-gradient(135deg, #F4F2F3, #BFC6D0);
-    /* background-image: url("https://i.pinimg.com/736x/c4/97/23/c49723a5ac280a005afc239cdf6829cd.jpg"); */
     background-image: url("https://i.pinimg.com/originals/e4/8a/9e/e48a9ec8fc62533b6d981bb9cfd62898.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    
 }
 
 html, body {
@@ -99,8 +109,8 @@ html, body {
 	display:flex;
 	justify-content:center;
 	align-items:center;
+    padding: 0 2rem;
+    
 }
 
-body {
-	padding: 0 2rem;
-} 
+
