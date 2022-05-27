@@ -1,4 +1,5 @@
 # AnChat
+anchat.surge.sh
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Express: `npm i express`
 Socket.io: `npm install socket.io`
+Cors: `npm i cors`
 
 To run the app please use this command in the terminal:
 `npm run start`
