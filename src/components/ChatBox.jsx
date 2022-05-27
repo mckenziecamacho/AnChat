@@ -7,7 +7,6 @@ const socket = io("http://localhost:3005");
 const ChatBox = () => {
 
     const inputRef = useRef(null);
-
     const [form, setForm] = useState('');
 
     function handleChange(e) {

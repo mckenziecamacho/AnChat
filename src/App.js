@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-// import Footer from './components/Footer';
 import ChatBox from './components/ChatBox';
 import Chat from './components/Chat';
 import io from "socket.io-client";
